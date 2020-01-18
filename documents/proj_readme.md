@@ -22,9 +22,11 @@ average value of similar houses ( with in 5% lot area).
 The cleaning steps were performed on test data as well if the feature was included in the model.
 The steps for cleaning can be found [here](https://git.generalassemb.ly/mzavar/project_2/blob/master/code/01%20-%20Cleaning.ipynb)
  
-# EDA
-A typical average home in Ames Iowa ![](https://git.generalassemb.ly/mzavar/project_2/blob/master/images/avg_iowa_home.png)
+# Exploratory Data Analysis
+A typical average home in Ames Iowa 
+![](https://git.generalassemb.ly/mzavar/project_2/blob/master/images/avg_iowa_home.png)
 https://git.generalassemb.ly/mzavar/project_2/blob/master/images/avg_iowa_home.png
+
 ** Column Encoding **
 In order for model to take advantage of all non-numerical columns, the features were analysed to separate the numerical from categorical features. The categorical features were further analysed to determine which features has ordinal nature and converted to a numerical represention.
 for example
@@ -38,11 +40,24 @@ determine if they had impact on sale price and converted to multiple numerical c
   There were few homes less than 1% that were missing utilities are were removed.
   
 # Features
-    
+A set of new features were created  like  total_sq_ft, number of porches, age of the home  to  evaluate if they could impact the home price
+
+# Transformation
+ The sale price distribution was found to  be right skewed. A logarithmic trasnformation was applied for it to be more normally distributed so that was more suitable for the model.
 
 
-# Building Model
+#  Model building and Evaluation
+Linear regression was used as a choice of machine learning model using the  following set of features that were identified as secret sauce to get optimal performance  from the model
+<TODO>
+ 
+ The model was evaluated for two diffrent loss function RMSE  and R2 score.
+ Based on the results  the model could predict the home price with in +/-23158$ of the actual value. The model could absorb
+ 80% of the time variabiiity in the data . Based on the resulys we fine the model itself was robust in terms of accuracy and generalising the results for unseen data. The model is using 30 features and can be improved upon to include additional features up  to 45 without sacrificing the
+generalization. Additionally some of the numerical features that went in to model exhibited right skewed distribution and
+can be transformed to normal distribution  for the model to better interpret them. Advanced models like polynomial linear
+regression and other can be tried  to further improve accuracy.
 
-#Accuracy :
-
-
+# Conclusion
+At high level  the results from the model are  promising given that  it can predict the  price of the house in ball park of
+23000$ , this might be good  model intially for larger homes.This may not be ready of prime time and to be rolled out.
+But we work with appraisers and improve the model with their input and more advanced statistical techniques, this should bring us closer to our goal of faster , consistent, transperant appriasal process for our stakeholders. 
