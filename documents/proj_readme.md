@@ -27,7 +27,7 @@ A typical average home in Ames Iowa
 ![](https://git.generalassemb.ly/mzavar/project_2/blob/master/images/avg_iowa_home.png)
 https://git.generalassemb.ly/mzavar/project_2/blob/master/images/avg_iowa_home.png
 
-** Column Encoding **
+### Column Encoding 
 In order for model to take advantage of all non-numerical columns, the features were analysed to separate the numerical from categorical features. The categorical features were further analysed to determine which features has ordinal nature and converted to a numerical represention.
 for example
 Garage Quality { Ex, Gd, Avg,poor}  was translated to  {3,2,1,0)  do that the model can include these features if they placed
@@ -36,19 +36,18 @@ role in the incresed or decresed price of the house.
 The second set of categorical variables like  neighborhood, lot configureation etc were  looked at individual level to
 determine if they had impact on sale price and converted to multiple numerical columns - one for each category.
 
-** Outliers **
+### Outliers 
   There were few homes less than 1% that were missing utilities are were removed.
   
-# Features
+### Features
 A set of new features were created  like  total_sq_ft, number of porches, age of the home  to  evaluate if they could impact the home price
 
-# Transformation
+### Transformation
  The sale price distribution was found to  be right skewed. A logarithmic trasnformation was applied for it to be more normally distributed so that was more suitable for the model.
 
 
-#  Model building and Evaluation
-Linear regression was used as a choice of machine learning model using the  following set of features that were identified as secret sauce to get optimal performance  from the model
-<TODO>
+### Model building and Evaluation
+Linear regression was used as a choice of machine learning model using the  following set of features that were identified as secret sauce to get optimal performance  from the model [here](http://localhost:8888/notebooks/code/04-Model%20building%20and%20Evaluation.ipynb
  
  The model was evaluated for two diffrent loss function RMSE  and R2 score.
  Based on the results  the model could predict the home price with in +/-23158$ of the actual value. The model could absorb
@@ -58,6 +57,6 @@ can be transformed to normal distribution  for the model to better interpret the
 regression and other can be tried  to further improve accuracy.
 
 # Conclusion
-At high level  the results from the model are  promising given that  it can predict the  price of the house in ball park of
+The results from the model are promising given that it can predict the price of the house in ball park of
 23000$ , this might be good  model intially for larger homes.This may not be ready of prime time and to be rolled out.
-But we work with appraisers and improve the model with their input and more advanced statistical techniques, this should bring us closer to our goal of faster , consistent, transperant appriasal process for our stakeholders. 
+But we work with appraisers and improve the model with their input and more advanced statistical techniques, this should bring us closer to our goal of faster ,consistent ,transperant appriasal process for our stakeholders. 
