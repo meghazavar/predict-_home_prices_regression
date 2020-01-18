@@ -23,7 +23,7 @@ The cleaning steps were performed on test data as well if the feature was includ
 The steps for cleaning can be found [here](https://git.generalassemb.ly/mzavar/project_2/blob/master/code/01%20-%20Cleaning.ipynb)
  
 # EDA
-![A typical average home in Ames Iowa](https://git.generalassemb.ly/mzavar/project_2/blob/master/images/avg_iowa_home.png)
+A typical average home in Ames Iowa ![](https://git.generalassemb.ly/mzavar/project_2/blob/master/images/avg_iowa_home.png)
 https://git.generalassemb.ly/mzavar/project_2/blob/master/images/avg_iowa_home.png
 ** Column Encoding **
 In order for model to take advantage of all non-numerical columns, the features were analysed to separate the numerical from categorical features. The categorical features were further analysed to determine which features has ordinal nature and converted to a numerical represention.
